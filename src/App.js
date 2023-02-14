@@ -7,7 +7,11 @@ class App extends Component {
     document.querySelector('#overlay').style.display = 'block';
     e.preventDefault();
     console.log(e.target.searchQuery.value);
-    const api = '/test/texttoimage';
+    console.log(process.env.NODE_ENV);
+    const api =
+      process.env.NODE_ENV === 'development'
+        ? '/test/texttoimage'
+        : 'https://7ub1xio0m9.execute-api.us-east-1.amazonaws.com';
     const data = { data: e.target.searchQuery.value };
     console.log(data);
     axios({
@@ -74,7 +78,15 @@ class App extends Component {
           />
 
           <div>
-            <img id='myImage' alt='Your Image will appear here' />
+            <img
+              id='myImage'
+              alt='Your Image will appear here'
+              style={{ 
+                maxInlineSize: '100%',
+                blockSize: 'auto',
+                aspectRatio:'2/1',
+               }}
+            />
           </div>
           <br />
           <input type='submit' value='Submit' />
