@@ -73,6 +73,7 @@ class App extends Component {
           </div>
         </div>
         <form onSubmit={this.handleSubmit}>
+          <h1> Welcome to Stable Diffusion AI</h1>
           <input
             autoFocus={true}
             type='text'
