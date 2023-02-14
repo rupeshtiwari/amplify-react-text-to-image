@@ -11,7 +11,7 @@ class App extends Component {
     const api =
       process.env.NODE_ENV === 'development'
         ? '/test/texttoimage'
-        : 'https://7ub1xio0m9.execute-api.us-east-1.amazonaws.com';
+        : 'https://7ub1xio0m9.execute-api.us-east-1.amazonaws.com/test/texttoimage';
     const data = { data: e.target.searchQuery.value };
     console.log(data);
     axios({
