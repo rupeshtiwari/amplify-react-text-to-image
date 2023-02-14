@@ -27,6 +27,9 @@ class App extends Component {
         el.setAttribute('src', response.data.body);
         setTimeout(() => {
           document.querySelector('#overlay').style.display = 'none';
+          const elem = document.getElementById('searchQuery');
+          elem.value = '';
+          elem.focus();
         }, 500);
       })
       .catch((error) => {
@@ -81,11 +84,11 @@ class App extends Component {
             <img
               id='myImage'
               alt='Your Image will appear here'
-              style={{ 
+              style={{
                 maxInlineSize: '100%',
                 blockSize: 'auto',
-                aspectRatio:'2/1',
-               }}
+                aspectRatio: '2/1',
+              }}
             />
           </div>
           <br />
