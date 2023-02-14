@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import './index.css';
 import axios from 'axios';
 
-
 class App extends Component {
   handleSubmit(e) {
     document.querySelector('#overlay').style.display = 'block';
@@ -22,7 +21,9 @@ class App extends Component {
         console.log(response);
         const el = document.querySelector('#myImage');
         el.setAttribute('src', response.data.body);
-        document.querySelector('#overlay').style.display = 'none';
+        setTimeout(() => {
+          document.querySelector('#overlay').style.display = 'none';
+        }, 500);
       })
       .catch((error) => {
         console.log(error);
