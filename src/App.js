@@ -77,6 +77,7 @@ class App extends Component {
             autoFocus={true}
             type='text'
             name='searchQuery'
+            id='searchQuery'
             placeholder='enter desired text'
           />
 
