@@ -4,13 +4,13 @@ import json
 import numpy as np
 import matplotlib.pyplot as plt
 import uuid
+import os
 
-## Use python 3.7 and use the layer attached in the zip file for matplotlib.zip. 
 
-endpoint_name = 'jumpstart-dft-stabilityai-txt2img-stabilityai-stable-d'
-s3 = boto3.resource('s3', region_name='us-east-1')
-bucket_name = 'testbucket-rupesh'
+endpoint_name = os.environ['AWS_SM_EP']
+bucket_name = os.environ['OUT_S3_BUCKET_NAME']
 s3_client = boto3.client('s3', region_name='us-east-1')
+s3 = boto3.resource('s3', region_name='us-east-1')
 
 
 def query_endpoint(text):
