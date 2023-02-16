@@ -18,7 +18,6 @@ class App extends Component {
       method: 'POST',
       data: JSON.stringify(data),
       headers: { 'Content-Type': 'application/json' },
-
       url: api,
     })
       .then((response) => {
@@ -40,37 +39,8 @@ class App extends Component {
   render() {
     return (
       <div className='container'>
-        <div
-          id='overlay'
-          style={{
-            position: 'absolute',
-            display: 'none',
-            width: '100%',
-            height: '100%',
-            top: '0',
-            left: '0',
-            right: '0',
-            bottom: '0',
-            backgroundColor: 'rgba(0,0,0,0.5)',
-            zIndex: '2',
-            cursor: 'pointer',
-            alignItems: 'center',
-            justifyContent: 'center',
-          }}
-        >
-          <div
-            style={{
-              position: 'absolute',
-              top: '50%',
-              left: '50%',
-              fontSize: '50px',
-              color: 'white',
-              transform: 'translate(-50%,-50%)',
-              msTransform: 'translate(-50%,-50%)',
-            }}
-          >
-            Loading your image please wait...
-          </div>
+        <div id='overlay'>
+          <div id='overlayText'>Loading your image please wait...</div>
         </div>
         <form onSubmit={this.handleSubmit}>
           <h1> Welcome to Stable Diffusion AI</h1>
@@ -89,11 +59,7 @@ class App extends Component {
             <img
               id='myImage'
               alt='Your Image will appear here'
-              style={{
-                maxInlineSize: '100%',
-                blockSize: 'auto',
-                aspectRatio: '2/1.5',
-              }}
+              className='imageContainer'
             />
           </div>
         </form>
