@@ -81,20 +81,21 @@ class App extends Component {
             id='searchQuery'
             placeholder='enter desired text'
           />
-
           <div>
+            <input type='submit' value='Submit' />
+          </div>
+          <div>
+            <br></br>
             <img
               id='myImage'
               alt='Your Image will appear here'
               style={{
                 maxInlineSize: '100%',
                 blockSize: 'auto',
-                aspectRatio: '2/1',
+                aspectRatio: '2/1.5',
               }}
             />
           </div>
-          <br />
-          <input type='submit' value='Submit' />
         </form>
       </div>
     );
