@@ -301,3 +301,4 @@ git push origin main
 
 1. https://aws.amazon.com/blogs/machine-learning/call-an-amazon-sagemaker-model-endpoint-using-amazon-api-gateway-and-aws-lambda/
 2. https://aws.amazon.com/getting-started/hands-on/build-react-app-amplify-graphql/module-one/?e=gs2020&p=build-a-react-app-intro
+3. https://www.youtube.com/watch?v=IwHt_QpIa8A ( convert in to mobile app using capacitor)
