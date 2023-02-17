@@ -45,6 +45,7 @@ class App extends Component {
         <form onSubmit={this.handleSubmit}>
           <h1> Welcome to Stable Diffusion AI</h1>
           <input
+            required
             autoFocus={true}
             type='text'
             name='searchQuery'
