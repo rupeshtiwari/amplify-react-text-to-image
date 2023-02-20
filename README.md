@@ -317,6 +317,10 @@ npm i @capacitor/android @capacitor/ios
 npx cap add android
 npx cap add ios
 
+# Build app
+npm run build
+npx cap sync
+
 # Open iOS project
 npx cap open ios
 ```
