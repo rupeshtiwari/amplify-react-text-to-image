@@ -62,6 +62,8 @@ class App extends Component {
               alt='Your Image will appear here'
               className='imageContainer'
             />
+          
+ 
           </div>
         </form>
       </div>
